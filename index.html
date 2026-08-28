@@ -1,0 +1,2905 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src 'self' file: blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src 'self' file: blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Dunhuang Dance Finetuning Dataset</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts allow-same-origin allow-downloads" referrerpolicy="no-referrer" title="Dunhuang Dance Finetuning Dataset" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src &#x27;self&#x27; file: blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src 'self' file: blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Dunhuang Dance Finetuning Dataset&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(--background) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: light-dark(rgb(255 255 255), rgb(24 24 24));
+  --foreground: light-dark(rgb(26 28 31), rgb(255 255 255));
+  --card: color-mix(in oklab, var(--foreground) 5%, transparent);
+  --card-foreground: var(--foreground);
+  --popover: light-dark(rgb(255 255 255), rgb(45 45 45));
+  --popover-foreground: var(--foreground);
+  --primary: light-dark(rgb(51 156 255), rgb(131 195 255));
+  --primary-foreground: light-dark(rgb(255 255 255), rgb(13 13 13));
+  --secondary: light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%));
+  --secondary-foreground: var(--foreground);
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: light-dark(
+    rgb(26 28 31 / 49.4%),
+    rgb(255 255 255 / 49.8%)
+  );
+  --accent: light-dark(rgb(229 242 255), rgb(13 39 63));
+  --accent-foreground: var(--primary);
+  --destructive: light-dark(rgb(226 85 7), rgb(255 133 73));
+  --border: light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%));
+  --input: light-dark(
+    rgb(26 28 31 / 11.8%),
+    color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+  );
+  --ring: light-dark(rgb(51 156 255), rgb(131 195 255 / 76%));
+  --font-size-base: 14px;
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: 12.5px;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+  --color-background-primary: var(--background);
+  --color-text-primary: var(--foreground);
+  --color-border-secondary: var(--border);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--viz-font-weight-medium);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;turning-dataset&quot;&gt;
+  &lt;style&gt;
+    #turning-dataset {
+      color: var(--foreground);
+      background: var(--background);
+      width: 100%;
+    }
+    #turning-dataset .td-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    #turning-dataset .td-heading p {
+      margin: 0;
+      color: var(--muted-foreground);
+    }
+    #turning-dataset .td-row {
+      display: grid;
+      grid-template-columns: minmax(11rem, 0.7fr) minmax(28rem, 1.7fr) minmax(28rem, 1.3fr);
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    #turning-dataset .td-header {
+      padding: 0.75rem 0;
+      color: var(--muted-foreground);
+      font-weight: 500;
+      border-top: 1px solid var(--border);
+    }
+    #turning-dataset .td-name {
+      font-weight: 500;
+    }
+    #turning-dataset .td-instructions p {
+      margin: 0 0 0.55rem;
+    }
+    #turning-dataset .td-instructions p:last-child {
+      margin-bottom: 0;
+    }
+    #turning-dataset .td-instructions ul {
+      margin: 0.4rem 0 0.55rem;
+      padding-left: 1.2rem;
+    }
+    #turning-dataset .td-instructions li {
+      margin: 0.25rem 0;
+    }
+    #turning-dataset .td-en {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted-foreground);
+    }
+    #turning-dataset .td-en p {
+      margin: 0 0 0.55rem;
+    }
+    #turning-dataset .td-en::before {
+      content: &quot;Literal English translation&quot;;
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--foreground);
+      font-weight: 500;
+    }
+    #turning-dataset .td-name-en {
+      display: block;
+      margin-top: 0.3rem;
+      color: var(--muted-foreground);
+      font-weight: 400;
+    }
+    #turning-dataset .td-video-stack {
+      display: grid;
+      gap: 0.75rem;
+    }
+    #turning-dataset video {
+      display: block;
+      width: 100%;
+      min-height: 18rem;
+      object-fit: contain;
+      background: var(--muted);
+      border-radius: 0.4rem;
+    }
+    #turning-dataset .td-file {
+      display: block;
+      margin-top: 0.3rem;
+      overflow-wrap: anywhere;
+      color: var(--muted-foreground);
+    }
+    #turning-dataset .processed-video-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: 0.55rem;
+      align-items: start;
+    }
+    #turning-dataset .processed-conditioning {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 0.45rem;
+      grid-column: 1;
+      grid-row: 1;
+      align-self: stretch;
+      height: 100%;
+    }
+    #turning-dataset .processed-conditioning figure {
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      margin: 0;
+      min-height: 0;
+    }
+    #turning-dataset .processed-conditioning img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: contain;
+      border-radius: 0.4rem;
+      background: var(--muted);
+    }
+    #turning-dataset .processed-conditioning figcaption {
+      margin-top: 0.15rem;
+      color: var(--muted-foreground);
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: center;
+    }
+    #turning-dataset .processed-video-row video {
+      grid-column: 2;
+      grid-row: 1;
+      min-height: 0;
+      aspect-ratio: 24 / 29;
+    }
+    #turning-dataset .processed-video-row > .td-file {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 0;
+      font-size: 11px;
+      line-height: 1.25;
+    }
+    #turning-dataset .processed-prompts {
+      margin-top: 0.85rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--border);
+    }
+    #turning-dataset .processed-prompt-file {
+      margin-bottom: 0.5rem;
+      color: var(--foreground);
+      font-size: 11px;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+    #turning-dataset .processed-prompt-field {
+      display: block;
+      margin: 0 0 0.65rem;
+    }
+    #turning-dataset .processed-prompt-field:last-child {
+      margin-bottom: 0;
+    }
+    #turning-dataset .processed-prompt-label {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--muted-foreground);
+      font-size: 11px;
+    }
+    #turning-dataset .processed-prompt-input {
+      width: 100%;
+      min-height: 7rem;
+      resize: vertical;
+    }
+    #turning-dataset .processed-prompt-input-shared {
+      background: var(--muted);
+      color: var(--foreground);
+    }
+    #turning-dataset.training-1-mode .processed-prompt-field {
+      display: none;
+    }
+    #turning-dataset.training-1-mode .td-instructions &gt; :not(.processed-prompts) {
+      display: none;
+    }
+    #turning-dataset.training-1-mode .processed-prompts {
+      display: grid;
+      gap: 0.5rem;
+    }
+    #turning-dataset.training-1-mode .processed-prompt-file {
+      margin-bottom: 0;
+    }
+    #turning-dataset .training-1-prompt-text {
+      display: none;
+    }
+    #turning-dataset.training-1-mode .training-1-prompt-text {
+      display: block;
+      padding: 0.8rem 0.9rem;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      background: var(--muted);
+      color: var(--foreground);
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+    #turning-dataset .td-missing {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      color: var(--destructive);
+      background: color-mix(in srgb, var(--destructive) 10%, transparent);
+      font-weight: 500;
+    }
+    #turning-dataset .td-extra-start {
+      margin-top: 1.4rem;
+      padding-top: 1.1rem;
+      border-top: 2px solid var(--border);
+    }
+    #turning-dataset .td-extra-label {
+      margin: 0;
+      color: var(--muted-foreground);
+      font-weight: 500;
+    }
+    #turning-dataset .td-section {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 3px solid var(--border);
+    }
+    #turning-dataset .ds-summary {
+      margin-bottom: 3rem;
+    }
+    #turning-dataset .ds-summary h1,
+    #turning-dataset .ds-summary h3 {
+      margin-bottom: 0.75rem;
+    }
+    #turning-dataset .ds-summary .viz-grid {
+      margin-bottom: 1.25rem;
+    }
+    #turning-dataset .ds-section-summary {
+      margin: 0 0 1.25rem;
+      padding: 0 0 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    #turning-dataset .ds-section-summary p {
+      margin: 0.25rem 0;
+    }
+    #turning-dataset .ds-person-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.65rem;
+    }
+    #turning-dataset .ds-table-block {
+      margin-top: 1.5rem;
+    }
+    #turning-dataset .ds-table-block summary {
+      cursor: pointer;
+      font-weight: 500;
+    }
+    #turning-dataset .ds-table-block .table-responsive {
+      margin-top: 0.75rem;
+    }
+    #turning-dataset .ds-auto-note {
+      margin: 0.75rem 0 1.25rem;
+      color: var(--muted-foreground);
+    }
+    #turning-dataset #dataset-stats[hidden],
+    #turning-dataset .ds-section-summary {
+      display: none !important;
+    }
+    #turning-dataset .dataset-view-controls {
+      margin-bottom: 1.5rem;
+    }
+    #turning-dataset .dataset-view-controls p {
+      margin: 0 0 0.65rem;
+      color: var(--muted-foreground);
+    }
+    #turning-dataset .training-target-comparison {
+      margin-bottom: 1.5rem;
+    }
+    #turning-dataset .training-target-comparison h1 {
+      margin-bottom: 0.25rem;
+    }
+    #turning-dataset .training-target-comparison > p {
+      margin: 0 0 0.85rem;
+      color: var(--muted-foreground);
+    }
+    #turning-dataset .training-target-comparison table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    #turning-dataset .training-target-comparison th:first-child {
+      width: 12%;
+    }
+    #turning-dataset .training-target-comparison th:nth-child(2),
+    #turning-dataset .training-target-comparison th:nth-child(3) {
+      width: 44%;
+    }
+    #turning-dataset [hidden] {
+      display: none !important;
+    }
+    @media (max-width: 980px) {
+      #turning-dataset .td-header {
+        display: none;
+      }
+      #turning-dataset .td-row {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
+      #turning-dataset .td-name::before,
+      #turning-dataset .td-instructions::before,
+      #turning-dataset .td-video-cell::before {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: var(--muted-foreground);
+        font-weight: 400;
+      }
+      #turning-dataset .td-name::before { content: &quot;Book exercise&quot;; }
+      #turning-dataset .td-instructions::before { content: &quot;Book instructions&quot;; }
+      #turning-dataset .td-video-cell::before { content: &quot;Video&quot;; }
+    }
+  &lt;/style&gt;
+
+  &lt;section id=&quot;training-target-comparison&quot; class=&quot;training-target-comparison&quot; aria-live=&quot;polite&quot;&gt;
+    &lt;h1&gt;One-person training format&lt;/h1&gt;
+    &lt;p&gt;Current linked one-person videos compared with the planned Wan 2.2 FLF2V conversion target.&lt;/p&gt;
+    &lt;div class=&quot;table-responsive&quot;&gt;
+      &lt;table class=&quot;table table-sm&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;Metric&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Current dataset&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Desired for training&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;training-target-comparison-body&quot;&gt;
+          &lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;Reading linked video metadata…&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;nav class=&quot;dataset-view-controls&quot; aria-label=&quot;Filter videos by number of dancers&quot;&gt;
+    &lt;p id=&quot;dataset-filter-status&quot;&gt;Showing videos with 1 dancer&lt;/p&gt;
+    &lt;div class=&quot;viz-controls&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-person-filter=&quot;1&quot; aria-pressed=&quot;true&quot;&gt;1 person&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;processed&quot; aria-pressed=&quot;false&quot;&gt;Processed&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;training1&quot; aria-pressed=&quot;false&quot;&gt;training 1&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;all&quot; aria-pressed=&quot;false&quot;&gt;All&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;2&quot; aria-pressed=&quot;false&quot;&gt;2 people&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;3&quot; aria-pressed=&quot;false&quot;&gt;3 people&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-person-filter=&quot;multiple&quot; aria-pressed=&quot;false&quot;&gt;Multiple people&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;export-prompt-edits&quot;&gt;Export shared prompts · JSONL v2&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;section id=&quot;dataset-stats&quot; class=&quot;ds-summary&quot; aria-live=&quot;polite&quot; hidden&gt;
+    &lt;p class=&quot;ds-auto-note&quot;&gt;Computing statistics from the linked video files…&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-heading&quot;&gt;
+    &lt;h2&gt;Section 1 · Body Curves&lt;/h2&gt;
+    &lt;p&gt;6 book exercises · 8 matched video files · 1 exercise without video&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;td-row td-header&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div&gt;Body curve from the book&lt;/div&gt;
+    &lt;div&gt;Instructions / explanation from the book&lt;/div&gt;
+    &lt;div&gt;Video&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Body curve exercises from the book&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;一、柔和的小曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;1. Soft small curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，慢速。&lt;/p&gt;
+        &lt;p&gt;预备姿态：双脚并拢站立，双手下垂，眼平视（图82）。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第1-2拍，身体保持直立，提踵上升，最大限度地使身体升高。&lt;/li&gt;
+          &lt;li&gt;第3-4拍，脚跟逐渐落地，右膝略弯，向左膝推靠。微微推出左膀，肋、肩略向右靠，头略向左斜方低倾（图76）。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;左边右边两侧反复练习，节拍不变。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, slow tempo. Begin standing with the feet together, arms lowered, and eyes looking forward.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-2: Keep the body upright and rise onto demi-pointe as high as possible.&lt;/li&gt;
+            &lt;li&gt;Counts 3-4: Lower the heels gradually. Bend the right knee slightly and press it toward the left knee. Send the left hip slightly outward; angle the ribs and shoulders slightly right; incline the head low toward the left diagonal.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Repeat on both sides without changing the counts.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;柔和的小曲线与直角的三位体式曲线 video&quot;&gt;
+          &lt;source src=&quot;body_curves_segments/01-02_soft-small-and-right-angle.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;small class=&quot;td-file&quot;&gt;Shared source clip: 柔和的小曲线 + 直角的三位体式曲线&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;二、直角的三位体式曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;2. Right-angled three-part body curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，慢速。预备姿态同图82。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第1-2拍，左脚向左迈出一步，双脚同肩宽。侧波浪式推动：从膝、胯、腰、胸、颈、头节节由下向左侧推动至身体直立（图83）。&lt;/li&gt;
+          &lt;li&gt;第3拍，快速成直角的三位体式（图77）。第4拍，保持第3拍姿态。&lt;/li&gt;
+          &lt;li&gt;第5-6拍，动作同第1-2拍，只是要增加双臂带动身体顺擦至头上方（图84）。&lt;/li&gt;
+          &lt;li&gt;第7-8拍，与第3-4拍肢体曲线相同。一手臂在侧托掌，一手臂在胸前立掌（图85）。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;左、右方向反复练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, slow tempo. Begin as in figure 82.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-2: Step left to shoulder width. Use a lateral wave, sending the knees, hips, waist, chest, neck, and head successively toward the left until the body is upright.&lt;/li&gt;
+            &lt;li&gt;Count 3: Quickly form the right-angled three-part body posture. Count 4: Hold it.&lt;/li&gt;
+            &lt;li&gt;Counts 5-6: Repeat counts 1-2, adding both arms to lead the motion upward above the head.&lt;/li&gt;
+            &lt;li&gt;Counts 7-8: Repeat the curve from counts 3-4, with one arm holding a palm at the side and the other forming an upright palm before the chest.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Repeat to both left and right.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;柔和的小曲线与直角的三位体式曲线 shared video&quot;&gt;
+          &lt;source src=&quot;body_curves_segments/01-02_soft-small-and-right-angle.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;small class=&quot;td-file&quot;&gt;Shared source clip: 柔和的小曲线 + 直角的三位体式曲线&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;三、四道弯曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;3. Four-bend curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，慢速，在行进中完成。预备姿态同图82。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第1拍，右脚向前迈一步，双手扶膝。&lt;/li&gt;
+          &lt;li&gt;第2拍，左膀上提，肋向右冲。&lt;/li&gt;
+          &lt;li&gt;第3-4拍，左小腿侧抬勾脚，双膝并拢，头低向左斜方（图78）。&lt;/li&gt;
+          &lt;li&gt;第5-6拍，相反方向，相反动作。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;左、右方向反复练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, slow tempo, performed while traveling. Begin as in figure 82.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Step the right foot forward and place both hands on the knees.&lt;/li&gt;
+            &lt;li&gt;Count 2: Lift the left hip and thrust the ribs to the right.&lt;/li&gt;
+            &lt;li&gt;Counts 3-4: Lift the left lower leg to the side with a hooked foot, bring both knees together, and lower the head toward the left diagonal.&lt;/li&gt;
+            &lt;li&gt;Counts 5-6: Reverse the direction and movement.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Repeat to both left and right.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;四、五道弯曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;4. Five-bend curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;五道弯曲线 video&quot;&gt;
+          &lt;source src=&quot;body_curves_segments/04-five-bend.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;small class=&quot;td-file&quot;&gt;五道弯曲线.mp4&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;五、拧身曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;5. Twisting-body curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中速，斜线后退转身中完成。预备姿态同图82。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第1-2拍，右脚向右后斜方（4点）屈膝迈步，右转身，第2拍后半拍立直，面朝后斜方（4点）。&lt;/li&gt;
+          &lt;li&gt;第3-4拍，向右拧身下沉，右膝包住左膝，头向右前斜方（8点），双肩向右斜方（1点），胯向正前方（2点）（图80）。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;可以加上双臂配合练习，如转身时加云手变晃手至吹奏式。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium tempo, completed while turning and retreating along a diagonal.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-2: Bend the knees and step the right foot toward the right rear diagonal (point 4), turning right. In the second half of count 2, stand upright facing the rear diagonal.&lt;/li&gt;
+            &lt;li&gt;Counts 3-4: Twist right and sink. Wrap the right knee around the left; direct the head toward the right front diagonal (point 8), the shoulders toward the right diagonal (point 1), and the hips straight forward (point 2).&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;The arms may be added: during the turn, change from cloud hands through swaying hands into the playing-a-flute posture.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;拧身曲线 video 1&quot;&gt;&lt;source src=&quot;body_curves_segments/05-twisting-1.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;拧身曲线.mp4&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;拧身曲线 video 2&quot;&gt;&lt;source src=&quot;body_curves_segments/05-twisting-2.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;拧身曲线2.mp4&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;拧身曲线 video 3&quot;&gt;&lt;source src=&quot;body_curves_segments/05-twisting-3.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;拧身曲线3.mp4&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;拧身曲线 video 4&quot;&gt;&lt;source src=&quot;body_curves_segments/05-twisting-4.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;拧身曲线4.mp4&lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;六、S形大曲线&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;6. Large S-shaped curve&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;S形大曲线 video 1, 0 to 5 seconds&quot;&gt;&lt;source src=&quot;body_curves_segments/06-s-curve-1a_0-5.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;S形大曲线_0-5s.mp4&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;S形大曲线 video 1, 5 to 11 seconds&quot;&gt;&lt;source src=&quot;body_curves_segments/06-s-curve-1b_5-11.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;S形大曲线_5-11s.mp4&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;S形大曲线 video 2&quot;&gt;&lt;source src=&quot;body_curves_segments/06-s-curve-2.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;small class=&quot;td-file&quot;&gt;S形大曲线2.mp4&lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-extra-start&quot;&gt;
+    &lt;p class=&quot;td-extra-label&quot;&gt;Unclassified body-curve videos&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Unclassified body-curve videos&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;未分类&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;Unclassified&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;柔和的小曲线与直角的三位体式曲线组合片段。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Combined soft-small-curve and right-angled three-part-body-curve clip.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Unclassified combined body-curves video&quot;&gt;
+          &lt;source src=&quot;new vids/柔和的⼩曲线 + 直 ⾓ 的 三 位 体 式 曲 .mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;柔和的小曲线 + 直角的三位体式曲线.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;未分类&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;Unclassified&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;尚未映射到书中具体曲线练习的单人片段。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;&lt;p&gt;Single-dancer clip not yet mapped to a specific curve exercise in the book.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Unclassified body-curve video, 2 to 7 seconds&quot;&gt;&lt;source src=&quot;new vids/00_08_18m27s-18m59s_02-07.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;00_08_18m27s-18m59s_02-07.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Unclassified body-curve video, 7 to 12 seconds&quot;&gt;&lt;source src=&quot;new vids/00_08_18m27s-18m59s_07-12.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;00_08_18m27s-18m59s_07-12.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Unclassified body-curve video, 18 to 23 seconds&quot;&gt;&lt;source src=&quot;new vids/00_08_18m27s-18m59s_18-23.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;00_08_18m27s-18m59s_18-23.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Unclassified body-curve video, 25 to 30 seconds&quot;&gt;&lt;source src=&quot;new vids/00_08_18m27s-18m59s_25-30.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;00_08_18m27s-18m59s_25-30.mp4&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-heading td-section&quot;&gt;
+    &lt;h2&gt;Section 2 · Turning&lt;/h2&gt;
+    &lt;p&gt;12 book exercises · 9 matched video files · 3 video-only entries&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;td-row td-header&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div&gt;Turning type from the book&lt;/div&gt;
+    &lt;div&gt;Instructions / explanation from the book&lt;/div&gt;
+    &lt;div&gt;Video&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Turning types from the book&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;一、晃身后退转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;1. Swaying-body backward turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中速。手臂向上伸直，肩放松，上身由胸部领动晃圈，向后迈步转身。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1-2 拍，左脚向后迈步，晃身转圈一周。&lt;/li&gt;
+          &lt;li&gt;第 3 拍，原地上身小晃两圈，吸气上升。&lt;/li&gt;
+          &lt;li&gt;第 4 拍，靠腿上合掌，吐气下沉。&lt;/li&gt;
+          &lt;li&gt;第 5-8 拍方向相反。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;每四拍完成一个晃身后退转，左、右转交替反复练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium tempo. Extend the arms straight upward, relax the shoulders, let the chest lead the upper body in a circular sway, step backward, and turn the body.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-2: Step the left foot backward and make one full circle with a swaying-body turn.&lt;/li&gt;
+            &lt;li&gt;Count 3: In place, make two small circles with the upper body; inhale and rise.&lt;/li&gt;
+            &lt;li&gt;Count 4: Close the leg and bring the palms together overhead; exhale and sink.&lt;/li&gt;
+            &lt;li&gt;Counts 5-8: Perform in the opposite direction.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Complete one swaying-body backward turn every four counts. Alternate left and right turns and practice repeatedly.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;晃身后退转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/晃身后退转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;晃身后退转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;二、晃身横向转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;2. Swaying-body lateral turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中快。动律、姿态与晃身后退转相同。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1-2 拍，右脚向右侧横向迈步，晃身转圈。&lt;/li&gt;
+          &lt;li&gt;第 3 拍，继续快速向右横向晃身转两圈。&lt;/li&gt;
+          &lt;li&gt;第 4 拍，靠腿上合掌。&lt;/li&gt;
+          &lt;li&gt;第 5-8 拍方向相反。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;每四拍完成一个晃身横向转，左、右转交替反复练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium-fast. The movement rhythm and posture are the same as in the swaying-body backward turn.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-2: Step the right foot laterally to the right and make a circle with a swaying-body turn.&lt;/li&gt;
+            &lt;li&gt;Count 3: Continue quickly to the right and make two circles with a lateral swaying-body turn.&lt;/li&gt;
+            &lt;li&gt;Count 4: Close the leg and bring the palms together overhead.&lt;/li&gt;
+            &lt;li&gt;Counts 5-8: Perform in the opposite direction.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Complete one swaying-body lateral turn every four counts. Alternate left and right turns and practice repeatedly.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;晃身横向转 video&quot;&gt;
+            &lt;source src=&quot;turning_segments/晃身横向转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;晃身横向转.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;晃身横向转 second video&quot;&gt;
+            &lt;source src=&quot;turning_segments/晃身横向转2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;晃身横向转2.mp4&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;三、掏手错步转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;3. Scooping-hand stagger-step turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速。两手交替前掏上翻，直线向前错步，翻身转圈。一拍一错步，两拍转一圈。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，右脚上前错步，右手前掏、手心向上，向右翻身转；后半拍右手上翻腕，准备换手。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，转身后左脚上前错步，左手前掏，继续右转；后半拍左手上翻腕，准备换手。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;以此连续直线向前练习。向左转身时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast. The two hands alternately scoop forward and flip upward; move straight forward with stagger steps and turn the body in a circle. One stagger step per count; one circle in two counts.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Step the right foot forward in a stagger step. Scoop the right hand forward, palm upward, and turn the body to the right; in the second half of the count, flip the right wrist upward and prepare to change hands.&lt;/li&gt;
+            &lt;li&gt;Count 2: After turning, step the left foot forward in a stagger step. Scoop the left hand forward and continue turning right; in the second half of the count, flip the left wrist upward and prepare to change hands.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Continue practicing forward in a straight line in this way. When turning to the left, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;掏手错步转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/掏手错步转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;掏手错步转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;四、螺旋拧身转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;4. Spiral twisting-body turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，中快。拧身、起伏、后退转圈，由云手带动，两拍完成一个螺旋拧身转。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，反云手（左手在上），后退右转身；上身环动拧仰，身体挺立，提气。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，继续向右拧转身，大盘腿绷脚，成拧靠三道弯式体态，吐气下沉。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;以此连续进行。向左拧转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, medium-fast. Twist the body, rise and sink, and turn in a circle while moving backward, led by cloud hands. Complete one spiral twisting-body turn in two counts.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Perform reverse cloud hands, with the left hand above; move backward and turn the body to the right. Circle and twist the upper body backward, keep the body upright, and lift the breath.&lt;/li&gt;
+            &lt;li&gt;Count 2: Continue twisting and turning to the right. Make a large crossed-leg position with pointed feet, form a twisting, closing three-bend posture, exhale, and sink.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Continue in this way. When twisting and turning to the left, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;五、原地仰身转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;5. In-place backward-leaning turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，由中快到快。上身侧倾仰胸，以大戳步作 180° 转身。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;姿态：支撑腿弯，动力腿大戳步，上身前倾，一手侧上托，一手侧下按掌。&lt;/li&gt;
+          &lt;li&gt;动作：向后转、向前转，每拍转身 180°。支撑腿为轴碾转，动力腿移动，朝支撑腿方向转。&lt;/li&gt;
+          &lt;li&gt;第 1 拍背朝前；第 2 拍面朝前；第 3-4 拍重复；第 5-8 拍速度加快一倍。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;由中快逐渐加快至快速。反方向转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, from medium-fast to fast. Incline the upper body sideways and lift the chest backward; use a large stamping step to turn 180°.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Posture: Bend the supporting leg; make a large stamping step with the working leg; incline the upper body forward; hold one hand upward at the side and press the other hand downward at the side.&lt;/li&gt;
+            &lt;li&gt;Movement: Turn backward and turn forward, turning the body 180° on each count. Pivot on the supporting leg; move the working leg and turn toward the supporting leg.&lt;/li&gt;
+            &lt;li&gt;Count 1: Turn so the back faces front. Count 2: Turn again so the face is toward front. Counts 3-4: Repeat counts 1-2. Counts 5-8: Repeat counts 1-4 at twice the speed.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Gradually accelerate from medium-fast to fast. When turning in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地仰身转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/原地仰身转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;原地仰身转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;六、原地端腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;6. In-place held-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中快。旋转时支撑腿直，以前脚掌碾转，动力腿端起。四拍完成一个端腿转，可从一圈逐渐增加到多圈。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，双腿并拢、半蹲，一手上托掌，一手下斜推掌。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，支撑腿直，动力腿侧勾脚端腿旋转，双臂向两侧平伸。&lt;/li&gt;
+          &lt;li&gt;第 3-4 拍，支撑腿弯，动力腿端起，吐气下沉。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;向端腿方向转，提气直立；逐渐加圈加速。反方向转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium-fast. During the turn, keep the supporting leg straight, pivot on the ball of the foot, and hold the working leg out. Complete one held-leg turn in four counts, gradually increasing from one circle to multiple circles.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Bring the legs together and half-squat; hold one palm upward and push the other palm diagonally downward.&lt;/li&gt;
+            &lt;li&gt;Count 2: Straighten the supporting leg; hold the working leg to the side with the foot hooked and turn; extend both arms horizontally to the sides.&lt;/li&gt;
+            &lt;li&gt;Counts 3-4: Bend the supporting leg, keep the working leg held out, and exhale and sink.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Turn toward the held leg, lift the breath, and stand upright; gradually add circles and speed. When turning in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地端腿转 video, 0 to 5 seconds&quot;&gt;
+            &lt;source src=&quot;turning_segments/原地端腿转_0-5.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;原地端腿转_0-5s.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地端腿转 video, 3 to 8 seconds&quot;&gt;
+            &lt;source src=&quot;turning_segments/原地端腿转_3-8.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;原地端腿转_3-8s.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地端腿转 second video&quot;&gt;
+            &lt;source src=&quot;turning_segments/原地端腿转2.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;原地端腿转2.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地端腿转 third video&quot;&gt;
+            &lt;source src=&quot;turning_segments/原地端腿转3.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;原地端腿转3.mp4&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;七、行进靠腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;7. Traveling closed-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速。可沿斜线或圆圈行进。身体直立，两臂双平托；平转接碾转靠腿，前手臂变胸前立掌。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，双臂平托，向右作平转步接双脚碾转，提气。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，右手胸前立掌，右脚靠腿，身体稍下沉。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;快速连续进行，身体稍有起伏。反方向练习时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast. Travel along a diagonal line or a circle. Keep the body upright and both arms in a double horizontal supporting position; connect a flat turn to a pivoting closed-leg turn, while the forward arm changes to an upright palm in front of the chest.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Hold both arms horizontally; make a flat-turn step to the right, followed by a two-foot pivot; lift the breath.&lt;/li&gt;
+            &lt;li&gt;Count 2: Place the right hand as an upright palm before the chest, close the right leg, and sink slightly.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Continue quickly, with a slight rise and fall of the body. When practicing in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;行进靠腿转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/行进靠腿转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;行进靠腿转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;八、行进吸腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;8. Traveling drawn-up-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速，沿斜线行进。带附点的侧吸腿碾转，两拍完成：吸腿转占一拍半，落脚前进占半拍。&lt;/p&gt;
+        &lt;p&gt;第 1-2 拍，左脚上步，同时吸右腿向右转，上身略前倾；最后半拍落脚，身体直立。反方向转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast, traveling along a diagonal line. A dotted-rhythm side drawn-up-leg pivot turn is completed in two counts: the drawn-up-leg turn occupies one and a half counts, and stepping down to advance occupies half a count.&lt;/p&gt;
+          &lt;p&gt;Counts 1-2: Step forward on the left foot; at the same time, draw up the right leg and turn to the right, inclining the upper body slightly forward. In the final half-count, step down and make the body upright. When turning in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;九、行进拧身转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;9. Traveling twisting-body turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速，沿斜线行进。平脚上步，全脚掌踩地，上身胸腰转圆带动拧身，双手臂上抹。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，右脚上步，向右转身。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，继续右转，靠腿合掌。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;稍有起伏，动作连贯、速度快，形似拧麻花。反方向转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast, traveling along a diagonal line. Step with a flat foot and place the whole sole on the floor; the chest and waist circle to lead the twisting body, while both arms brush upward.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Step forward on the right foot and turn the body to the right.&lt;/li&gt;
+            &lt;li&gt;Count 2: Continue turning right, close the leg, and bring the palms together.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;There is a slight rise and fall. The movement should be continuous and fast, resembling the twisting of a rope. When turning in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;十、行进反吸腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;10. Traveling reverse drawn-up-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速，沿斜线行进。支撑腿略弯，胯前推，单手平托；以前脚掌碾转、脚跟抬起，平托手随转身作托盘转腕。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，右脚向斜前方迈步，左腿侧小抬腿（反吸），右手上平托、左手下按掌，向右转圈。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，转圈后左脚落地，右手托盘转向下。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;连续旋转，逐渐加圈加速。反方向转时动作相反。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast, traveling along a diagonal line. Keep the supporting leg slightly bent, push the hips forward, and hold one hand horizontally upward; pivot on the ball of the foot with the heel raised, while the horizontally supporting hand makes a tray-turning wrist rotation with the body.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Step the right foot toward the diagonal front; slightly lift the left leg to the side (reverse drawn-up leg); hold the right hand horizontally upward and press the left palm downward; turn in a circle to the right.&lt;/li&gt;
+            &lt;li&gt;Count 2: After the circle, step down on the left foot and rotate the right tray-holding hand downward.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Turn continuously, gradually adding circles and speed. When turning in the opposite direction, reverse the movements.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;行进反吸腿转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/行进反吸腿转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;行进反吸腿转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;十一、原地盘腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;11. In-place crossed-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中速。盘腿半蹲旋转。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1 拍，踏步双立掌。&lt;/li&gt;
+          &lt;li&gt;第 2 拍，右腿直起支撑，动力腿向左侧抬起 90°，双手准备反云手。&lt;/li&gt;
+          &lt;li&gt;第 3 拍，动力腿端起，支撑腿弯，以前脚掌碾转，双臂带动转圈。&lt;/li&gt;
+          &lt;li&gt;第 4 拍，继续旋转。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;四拍完成一个盘腿转，逐渐加圈加速。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium tempo. Turn in a crossed-leg half-squat.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Count 1: Make a step-position stance with both palms upright.&lt;/li&gt;
+            &lt;li&gt;Count 2: Straighten the right leg as the supporting leg; raise the working leg 90° to the left side; prepare both hands for reverse cloud hands.&lt;/li&gt;
+            &lt;li&gt;Count 3: Hold up the working leg, bend the supporting leg, pivot on the ball of the foot, and let both arms lead the circular turn.&lt;/li&gt;
+            &lt;li&gt;Count 4: Continue turning.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Complete one crossed-leg turn in four counts, gradually adding circles and speed.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;十二、反弹吸腿转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;12. Rebounding drawn-up-leg turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，快速，沿斜线行进。由直立平转接吸腿反弹式旋转；反弹舞姿转为原地转。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;第 1-4 拍（两小节），作平转，双手为双平托式。&lt;/li&gt;
+          &lt;li&gt;第 5-8 拍（两小节），作吸腿反弹式原地旋转，可连续多圈。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;从一圈逐渐增加到多圈并加速。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, fast, traveling along a diagonal line. Connect an upright flat turn to a rebounding drawn-up-leg rotation; the rebounding dance-posture turn becomes an in-place turn.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Counts 1-4 (two measures): Perform flat turns, with both hands in a double horizontal supporting position.&lt;/li&gt;
+            &lt;li&gt;Counts 5-8 (two measures): Perform a rebounding drawn-up-leg in-place rotation, continuing for multiple circles.&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Practice by gradually increasing from one circle to multiple circles and accelerating.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-extra-start&quot;&gt;
+    &lt;p class=&quot;td-extra-label&quot;&gt;Video entries not named in the book section&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Video-only turning entries&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;原地点步转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;In-place touch-step turn&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;原地点步转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/原地点步转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;原地点步转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;双手平举转&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;Turn with both hands held horizontally&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;双手平举转 video&quot;&gt;
+          &lt;source src=&quot;turning_segments/双手平举转.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;双手平举转.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;breathing&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;breathing video&quot;&gt;
+          &lt;source src=&quot;turning_segments/breathing.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;breathing.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-heading td-section&quot;&gt;
+    &lt;h2&gt;Section 3 · Footwork&lt;/h2&gt;
+    &lt;p&gt;11 book exercises · 10 matched videos · 1 video-only entry&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;td-row td-header&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div&gt;Footwork type from the book&lt;/div&gt;
+    &lt;div&gt;Instructions / explanation from the book&lt;/div&gt;
+    &lt;div&gt;Video&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Footwork types from the book&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;一、慢步（菩萨步之一）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;1. Slow step (Bodhisattva step I)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，慢速。四拍一步，动作端庄。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：第 1-2 拍，右脚上步，双手于腹前交叉，右手向上撩至胸前，吸气上升。第 3-4 拍，出右胯，右手向前斜平推，吐气下沉。第 5-8 拍反向重复。&lt;/li&gt;
+          &lt;li&gt;后退：步法、呼吸、拍节与前进相同，手臂后撩成前摊后托式。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, slow tempo. One step in four counts; the movement is dignified.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Counts 1-2: Step forward with the right foot. Cross both hands before the abdomen; sweep the right hand upward to the chest; inhale and rise. Counts 3-4: Send the right hip outward, push the right hand horizontally toward the diagonal front, exhale, and sink. Counts 5-8: Repeat on the opposite side.&lt;/li&gt;
+            &lt;li&gt;Backward: The steps, breathing, and counts are the same as for traveling forward. Sweep the arms backward into the front-spreading, rear-supporting position.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;慢步（菩萨步） video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/01_慢步（菩萨步）.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;01_慢步（菩萨步）.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;二、莲花步（菩萨步之二）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;2. Lotus step (Bodhisattva step II)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：第 1-2 拍，右脚由膝盖带动提起，第 2 拍右脚绷脚朝地面划小圆圈，后半拍左支撑腿半脚尖提起。第 3-4 拍，双脚半脚尖立直，成交脚步；第 4 拍脚跟落地，同时左脚交叉后踏。第 5-8 拍换脚反向，双手由胸前合掌直向头上方。&lt;/li&gt;
+          &lt;li&gt;后退：脚部动作及上、下合掌位置与前进相同。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Counts 1-2: The knee leads the right foot upward. On count 2, point the right foot and draw a small circle toward the floor; in the second half of the count, lift the left supporting leg onto demi-pointe. Counts 3-4: Stand upright on demi-pointe on both feet, forming a crossed-foot step; on count 4, lower the heels while the left foot crosses and steps behind. Counts 5-8: Change feet and reverse the direction; move both palms together from before the chest straight to above the head.&lt;/li&gt;
+            &lt;li&gt;Backward: The foot movements and the upper and lower positions of the joined palms are the same as for traveling forward.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;三、平步（伎乐步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;3. Level step (musician-dancer step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 或 2/4 音乐，中速。两拍一步，动作平稳。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：第 1 拍迈步，吸气上升。第 2 拍后脚擦前脚脚腕，吐气下沉，双臂在体侧自然摆动。随后换侧重复。&lt;/li&gt;
+          &lt;li&gt;后退：步法、呼吸、拍节与前进相同；手臂侧平伸后，一手上至耳侧，一手斜下。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 or 2/4 music, medium tempo. One step in two counts; the movement is steady.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Count 1: Take a step, inhale, and rise. Count 2: Brush the rear foot past the ankle of the front foot, exhale, and sink; let both arms swing naturally at the sides of the body. Then change sides and repeat.&lt;/li&gt;
+            &lt;li&gt;Backward: The steps, breathing, and counts are the same as for traveling forward. After extending the arms horizontally to the sides, bring one hand beside the ear and the other diagonally downward.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;平步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/02_平步点.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;02_平步点.mp4 · closest filename match&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;四、点靠步（童子步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;4. Touch-and-close step (child step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，稍快。两拍一步，动作轻脆。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：第 1 拍，前脚快速点地后靠在支撑腿小腿肚前，动力腿同侧手以三指侧提腕，吐气下沉。第 2 拍点靠脚落地，吸气上升，准备换脚换手。随后反向重复。&lt;/li&gt;
+          &lt;li&gt;后退：步法、呼吸、拍节与前进相同；原支撑腿变动力腿，换重心点靠。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, slightly fast. One step in two counts; the movement is light and crisp.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Count 1: Quickly touch the front foot to the floor, then close it before the calf of the supporting leg. The hand on the same side as the working leg lifts the wrist sideways with three fingers; exhale and sink. Count 2: Step down with the touching-and-closing foot, inhale, and rise, preparing to change feet and hands. Then repeat on the opposite side.&lt;/li&gt;
+            &lt;li&gt;Backward: The steps, breathing, and counts are the same as for traveling forward. The original supporting leg becomes the working leg; transfer the weight and perform the touch-and-close.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;点靠步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/03_靠步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;03_靠步.mp4 · closest filename match&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;五、戳点步（童子步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;5. Stabbing-touch step (child step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，中速。四拍完成一个戳点步，动作活泼。每步双脚保持三位，第四拍靠脚，配合鹿角指。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：左、右脚依次戳点；鹿角指手心依次朝上、朝下。第三拍后半拍戳地腿伸直并吸气，双手鹿角指下翻腕。第四拍左脚小靠腿，双手在胸前成鹿角式对腕。随后换侧重复。&lt;/li&gt;
+          &lt;li&gt;后退：脚步、呼吸和拍节相同。鹿角手在头上方正反翻腕；第三拍后半拍侧面勾脚点地并翻腕、吸气上升；第四拍动力脚在支撑腿后小靠，支撑腿略弯，吐气下沉。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, medium tempo. Complete one stabbing-touch step in four counts; the movement is lively. Keep both feet in third position during each step; close the foot on count 4 and coordinate with deer-antler fingers.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Stab and touch with the left and right feet in succession; the palms of the deer-antler fingers face upward and downward in succession. In the second half of count 3, straighten the floor-stabbing leg and inhale while both deer-antler hands turn the wrists downward. On count 4, make a small close with the left leg; place both hands before the chest with the wrists facing each other in deer-antler form. Then change sides and repeat.&lt;/li&gt;
+            &lt;li&gt;Backward: The steps, breathing, and counts are the same. Turn the deer-antler hands over and back above the head. In the second half of count 3, touch the hooked foot to the side, turn the wrists, inhale, and rise. On count 4, make a small close with the working foot behind the supporting leg; bend the supporting leg slightly, exhale, and sink.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;戳点步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/04_戳点步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;04_戳点步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;六、小斜步（迦陵频迦步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;6. Small diagonal step (Kalavinka step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中速。四拍完成一个小斜步，动作欢快雀跃，左右斜方交替。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前斜步：动力小腿侧抬、支撑腿略弯并下沉，随后动力腿勾脚向斜前方小踢；向斜前方上两小步并脚；动力腿向斜前方抬起约 45°；最后绷脚向正前方点地。手臂依次完成头上反靠腕、分手、向下翻腕成佛手、胸前佛手对腕、转腕交叉并松腕下垂。&lt;/li&gt;
+          &lt;li&gt;后斜步：向斜后方撤步，另一脚向斜前方小踢后快速勾脚小靠；向斜后方退两步并脚；动力脚向前抬约 45°；最后侧小抬腿，支撑脚碾转约 45°。手臂配合头上正反碰腕、向下翻腕、胸前佛手对腕、转腕交叉并松腕下垂。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium tempo. Complete one small diagonal step in four counts; the movement is cheerful and leaping, alternating between the left and right diagonals.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward diagonal step: Lift the lower working leg to the side; bend the supporting leg slightly and sink. Then hook the working foot and give a small kick toward the diagonal front; take two small steps toward the diagonal front and bring the feet together; lift the working leg about 45° toward the diagonal front; finally point the foot and touch the floor directly in front. The arms successively perform reverse wrist-closing above the head, separate, turn the wrists downward into Buddha hands, face the Buddha-hand wrists toward each other before the chest, cross while turning the wrists, then relax the wrists and let them hang.&lt;/li&gt;
+            &lt;li&gt;Backward diagonal step: Step back toward the diagonal rear; after the other foot gives a small kick toward the diagonal front, quickly hook the foot and make a small close; take two steps toward the diagonal rear and bring the feet together; lift the working foot about 45° forward; finally make a small side leg lift while the supporting foot pivots about 45°. Coordinate the arms with forward and reverse wrist touches above the head, downward wrist turns, Buddha-hand wrists facing each other before the chest, crossing wrist turns, and relaxed hanging wrists.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;小斜步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/05_小斜步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;05_小斜步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;七、大斜步（迦陵频迦步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;7. Large diagonal step (Kalavinka step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，稍慢。四拍完成一个大斜步，动作有力；手臂以斜线打开，左右斜方交替。&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;前进：向斜前方迈大步，后脚贴靠前小腿，双臂沿斜线伸直、手心朝上；继续向斜前方迈两步并吸气上升，双手向下再向上翻腕；随后回身面向斜后方，吸靠腿，双肘微弯，上身前倾并吐气下沉。&lt;/li&gt;
+          &lt;li&gt;后退：动力脚向斜后方退一大步，上身前倾、面向斜前方，前腿勾脚吸起，双臂斜线伸直；继续向斜后方退两步，身体稍直并吸气上升，双手翻腕；随后前腿吸靠，双肘微弯并吐气下沉。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, slightly slow. Complete one large diagonal step in four counts; the movement is forceful. Open the arms along a diagonal line and alternate between the left and right diagonals.&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Forward: Take a large step toward the diagonal front; place the rear foot close against the front calf; extend both arms straight along a diagonal line with palms upward. Continue with two steps toward the diagonal front, inhale, and rise while both hands turn downward and then upward. Then turn back to face the diagonal rear, draw up and close the leg, bend both elbows slightly, incline the upper body forward, exhale, and sink.&lt;/li&gt;
+            &lt;li&gt;Backward: Take a large step toward the diagonal rear with the working foot; incline the upper body forward and face the diagonal front; hook and draw up the front leg; extend both arms straight on a diagonal. Continue with two steps toward the diagonal rear, make the body slightly upright, inhale, and rise while turning both wrists. Then draw up and close the front leg, bend both elbows slightly, exhale, and sink.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;大斜步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/06_大斜步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;06_大斜步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;八、横靠步（伎乐步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;8. Lateral closing step (musician-dancer step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 或 4/4 音乐，慢速。每八拍完成一个横靠步，动作柔曼。侧向横迈并靠腿，手臂在胯旁两侧顺绕腕，吐气下沉；靠腿脚落地后踏，身体立直并吸气上升。重复后加快为一拍一横步；最后横移一步，双手在肩上方顺绕腕，以大靠腿和侧托按掌结束。左右均练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 or 4/4 music, slow tempo. Complete one lateral closing step in eight counts; the movement is soft and flowing. Step laterally to the side and close the leg; circle the wrists forward at both sides beside the hips, exhale, and sink. After the closing foot steps down behind, make the body upright, inhale, and rise. After repeating, accelerate to one lateral step per count. Finally, move one step laterally, circle both wrists forward above the shoulders, and finish with a large leg close and side supporting-and-pressing palms. Practice to both left and right.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;横靠步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/07_横靠步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;07_横靠步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;九、横踏步（伎乐步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;9. Lateral treading step (musician-dancer step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 或 4/4 音乐，中速。每八拍完成一个横踏步，动作平稳。向侧面横迈踏步，手臂随移动方向晃动，形成一手在头侧、另一手在胸前、三指向下的姿态，吐气下沉；踏步脚支撑身体直立，吸气上升。后半段加快为一拍一横踏，身体保持平稳，头随方向和节奏轻微移动。左右均练习。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 or 4/4 music, medium tempo. Complete one lateral treading step in eight counts; the movement is steady. Step and tread laterally to the side; let the arms sway in the direction of travel, forming a posture with one hand beside the head and the other before the chest, three fingers pointing downward; exhale and sink. Let the treading foot support the upright body; inhale and rise. In the latter half, accelerate to one lateral tread per count, keep the body steady, and move the head slightly with the direction and rhythm. Practice to both left and right.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;横踏步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/08_横踏步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;08_横踏步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;十、横碎步（仙女步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;10. Lateral tiny step (fairy step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;4/4 音乐，中速。半脚尖、双膝并拢、半蹲，横向错步。前两拍向左碎步，双立掌由右向左上方晃动，身体直立；后两拍左腿盘至右膝上，手提腕推掌，吐气下沉。随后换方向重复。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;4/4 music, medium tempo. On demi-pointe, keep both knees together and half-squat while making lateral stagger steps. During the first two counts, travel left with tiny steps; sway both upright palms from the right toward the upper left and keep the body upright. During the latter two counts, cross the left leg over the right knee; lift the wrists and push the palms, exhale, and sink. Then change direction and repeat.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;横碎步 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/09_横碎步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;09_横碎步.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;十一、小快步（仙女步）&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;11. Small quick step (fairy step)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;
+        &lt;p&gt;2/4 音乐，中速。脚下碎步同古典舞；横线行进时冲身幅度要大，每拍可走若干步。可按小圆圈、大圆圈、直线、横线或斜线行进，集体练习可组成各种队形和画面。&lt;/p&gt;
+        &lt;div class=&quot;td-en&quot; lang=&quot;en&quot;&gt;
+          &lt;p&gt;2/4 music, medium tempo. The tiny steps underfoot are the same as in classical dance. When traveling along a horizontal line, the thrust of the body should be broad; several steps may be taken on each count. Travel may follow a small circle, large circle, straight line, horizontal line, or diagonal line. Group practice may form various formations and pictures.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;td-video-cell td-video-stack&quot;&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;小快步 video&quot;&gt;
+            &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/10_小快步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;10_小快步.mp4&lt;/code&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;小快步 group video&quot;&gt;
+            &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/11_小快步.mp4&quot; type=&quot;video/mp4&quot;&gt;
+          &lt;/video&gt;
+          &lt;code class=&quot;td-file&quot;&gt;11_小快步.mp4&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;div class=&quot;td-extra-start&quot;&gt;
+    &lt;p class=&quot;td-extra-label&quot;&gt;Footwork video entries not named as book exercises&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;section aria-label=&quot;Video-only footwork entries&quot;&gt;
+    &lt;article class=&quot;td-row&quot;&gt;
+      &lt;div class=&quot;td-name&quot;&gt;步法组合&lt;span class=&quot;td-name-en&quot; lang=&quot;en&quot;&gt;Footwork combination&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-instructions&quot;&gt;&lt;span class=&quot;td-missing&quot;&gt;Missing&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;td-video-cell&quot;&gt;
+        &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;步法组合 video&quot;&gt;
+          &lt;source src=&quot;sections_part1/08_八_步法十种_subsections/11_footwrok_combo.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;/video&gt;
+        &lt;code class=&quot;td-file&quot;&gt;11_footwrok_combo.mp4&lt;/code&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;script&gt;
+  (() =&gt; {
+    const root = document.getElementById(&quot;turning-dataset&quot;);
+    const statsRoot = document.getElementById(&quot;dataset-stats&quot;);
+    const comparisonBody = document.getElementById(&quot;training-target-comparison-body&quot;);
+    if (root == null || statsRoot == null || comparisonBody == null) return;
+
+    const dancerCounts = new Map([
+      [&quot;body_curves_segments/01-02_soft-small-and-right-angle.mp4&quot;, 3],
+      [&quot;body_curves_segments/04-five-bend.mp4&quot;, 1],
+      [&quot;body_curves_segments/05-twisting-1.mp4&quot;, 1],
+      [&quot;body_curves_segments/05-twisting-2.mp4&quot;, 1],
+      [&quot;body_curves_segments/05-twisting-3.mp4&quot;, 1],
+      [&quot;body_curves_segments/05-twisting-4.mp4&quot;, 1],
+      [&quot;body_curves_segments/06-s-curve-1a_0-5.mp4&quot;, 1],
+      [&quot;body_curves_segments/06-s-curve-1b_5-11.mp4&quot;, 1],
+      [&quot;body_curves_segments/06-s-curve-2.mp4&quot;, 3],
+      [&quot;new vids/柔和的⼩曲线 + 直 ⾓ 的 三 位 体 式 曲 .mp4&quot;, 3],
+      [&quot;new vids/00_08_18m27s-18m59s_02-07.mp4&quot;, 1],
+      [&quot;new vids/00_08_18m27s-18m59s_07-12.mp4&quot;, 1],
+      [&quot;new vids/00_08_18m27s-18m59s_18-23.mp4&quot;, 1],
+      [&quot;new vids/00_08_18m27s-18m59s_25-30.mp4&quot;, 1],
+      [&quot;turning_segments/晃身后退转.mp4&quot;, 4],
+      [&quot;turning_segments/晃身横向转.mp4&quot;, 4],
+      [&quot;turning_segments/晃身横向转2.mp4&quot;, 4],
+      [&quot;turning_segments/掏手错步转.mp4&quot;, 4],
+      [&quot;turning_segments/原地仰身转.mp4&quot;, 4],
+      [&quot;turning_segments/原地端腿转_0-5.mp4&quot;, 1],
+      [&quot;turning_segments/原地端腿转_3-8.mp4&quot;, 1],
+      [&quot;turning_segments/原地端腿转2.mp4&quot;, 1],
+      [&quot;turning_segments/原地端腿转3.mp4&quot;, 1],
+      [&quot;turning_segments/行进靠腿转.mp4&quot;, 1],
+      [&quot;turning_segments/行进反吸腿转.mp4&quot;, 1],
+      [&quot;turning_segments/原地点步转.mp4&quot;, 4],
+      [&quot;turning_segments/双手平举转.mp4&quot;, 4],
+      [&quot;turning_segments/breathing.mp4&quot;, 4],
+      [&quot;sections_part1/08_八_步法十种_subsections/01_慢步（菩萨步）.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/02_平步点.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/03_靠步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/04_戳点步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/05_小斜步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/06_大斜步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/07_横靠步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/08_横踏步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/09_横碎步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/10_小快步.mp4&quot;, 1],
+      [&quot;sections_part1/08_八_步法十种_subsections/11_小快步.mp4&quot;, 4],
+      [&quot;sections_part1/08_八_步法十种_subsections/11_footwrok_combo.mp4&quot;, 4]
+    ]);
+    root.datasetDancerCounts = dancerCounts;
+
+    const groups = [];
+    let currentGroup = null;
+    Array.from(root.children).forEach((child) =&gt; {
+      if (child.id === &quot;dataset-stats&quot;) return;
+      const heading = child.matches(&quot;.td-heading&quot;) ? child.querySelector(&quot;h2&quot;) : null;
+      if (heading?.textContent.trim().startsWith(&quot;Section &quot;)) {
+        currentGroup = {
+          heading: child,
+          title: heading.textContent.trim(),
+          videos: []
+        };
+        groups.push(currentGroup);
+        return;
+      }
+      if (currentGroup != null) {
+        currentGroup.videos.push(...child.querySelectorAll(&quot;video&quot;));
+      }
+    });
+
+    const allVideos = groups.flatMap((group) =&gt; group.videos);
+    const waitForMetadata = (video) =&gt; new Promise((resolve) =&gt; {
+      if (video.readyState &gt;= 1) {
+        resolve();
+        return;
+      }
+      video.addEventListener(&quot;loadedmetadata&quot;, resolve, { once: true });
+      video.addEventListener(&quot;error&quot;, resolve, { once: true });
+    });
+
+    const cleanName = (src) =&gt; {
+      const part = src.split(&quot;/&quot;).pop() ?? src;
+      try { return decodeURIComponent(part); } catch { return part; }
+    };
+    const personCategory = (count) =&gt; {
+      if (count === 0) return &quot;No dancer&quot;;
+      if (count === 1) return &quot;1 dancer&quot;;
+      if (count === 2) return &quot;2 dancers&quot;;
+      if (count === 3) return &quot;3 dancers&quot;;
+      if (count &gt;= 4) return &quot;Multiple (4+)&quot;;
+      return &quot;Unreviewed&quot;;
+    };
+    const median = (values) =&gt; {
+      const sorted = [...values].sort((a, b) =&gt; a - b);
+      const middle = Math.floor(sorted.length / 2);
+      return sorted.length % 2 === 0
+        ? (sorted[middle - 1] + sorted[middle]) / 2
+        : sorted[middle];
+    };
+    const durationText = (seconds) =&gt; {
+      if (!Number.isFinite(seconds)) return &quot;Unavailable&quot;;
+      if (seconds &lt; 60) return `${seconds.toFixed(1)} s`;
+      const minutes = Math.floor(seconds / 60);
+      return `${minutes}m ${(seconds - minutes * 60).toFixed(1)}s`;
+    };
+    const greatestCommonDivisor = (a, b) =&gt; {
+      let first = a;
+      let second = b;
+      while (second !== 0) {
+        const remainder = first % second;
+        first = second;
+        second = remainder;
+      }
+      return first;
+    };
+    const aspectRatio = (width, height) =&gt; {
+      if (width &lt;= 0 || height &lt;= 0) return &quot;Unavailable&quot;;
+      const divisor = greatestCommonDivisor(width, height);
+      return `${width / divisor}:${height / divisor}`;
+    };
+    const compactCounts = (values) =&gt; {
+      const counts = new Map();
+      values.forEach((value) =&gt; counts.set(value, (counts.get(value) ?? 0) + 1));
+      return [...counts.entries()]
+        .sort((a, b) =&gt; b[1] - a[1])
+        .map(([value, count]) =&gt; `${value} (${count})`)
+        .join(&quot;; &quot;);
+    };
+    const resolutionCounts = (records) =&gt; {
+      const counts = new Map();
+      records.forEach((record) =&gt; counts.set(
+        record.resolution,
+        (counts.get(record.resolution) ?? 0) + 1
+      ));
+      return [...counts.entries()].sort((a, b) =&gt; b[1] - a[1]);
+    };
+    const categoryCounts = (records) =&gt; {
+      const counts = new Map([
+        [&quot;1 dancer&quot;, 0],
+        [&quot;2 dancers&quot;, 0],
+        [&quot;3 dancers&quot;, 0],
+        [&quot;Multiple (4+)&quot;, 0],
+        [&quot;No dancer&quot;, 0],
+        [&quot;Unreviewed&quot;, 0]
+      ]);
+      records.forEach((record) =&gt; counts.set(
+        record.people,
+        (counts.get(record.people) ?? 0) + 1
+      ));
+      return counts;
+    };
+    const lengthBins = (records) =&gt; {
+      const bins = { under5: 0, exact5: 0, fiveTo10: 0, over10: 0 };
+      records.forEach(({ duration }) =&gt; {
+        if (duration &lt; 4.995) bins.under5 += 1;
+        else if (duration &lt;= 5.005) bins.exact5 += 1;
+        else if (duration &lt;= 10) bins.fiveTo10 += 1;
+        else bins.over10 += 1;
+      });
+      return bins;
+    };
+    const personBadges = (records) =&gt; {
+      const counts = categoryCounts(records);
+      return [...counts.entries()]
+        .filter(([, count]) =&gt; count &gt; 0)
+        .map(([label, count]) =&gt;
+          `&lt;span class=&quot;viz-badge&quot;&gt;${label}: ${count}&lt;/span&gt;`
+        ).join(&quot;&quot;);
+    };
+    const summarize = (records) =&gt; {
+      const durations = records.map((record) =&gt; record.duration);
+      const resolutions = resolutionCounts(records);
+      return {
+        total: durations.reduce((sum, value) =&gt; sum + value, 0),
+        min: Math.min(...durations),
+        max: Math.max(...durations),
+        median: median(durations),
+        resolutions,
+        bins: lengthBins(records)
+      };
+    };
+
+    Promise.all(allVideos.map(waitForMetadata)).then(() =&gt; {
+      const recordsBySection = new Map();
+      groups.forEach((group) =&gt; {
+        const unique = new Map();
+        group.videos.forEach((video) =&gt; {
+          const source = video.querySelector(&quot;source&quot;);
+          const src = source?.getAttribute(&quot;src&quot;) ?? &quot;&quot;;
+          if (src === &quot;&quot; || unique.has(src)) return;
+          const count = dancerCounts.get(src);
+          unique.set(src, {
+            section: group.title.replace(/^Section \\d+ · /, &quot;&quot;),
+            src,
+            name: cleanName(src),
+            duration: video.duration,
+            resolution: video.videoWidth &gt; 0
+              ? `${video.videoWidth}×${video.videoHeight}`
+              : &quot;Unavailable&quot;,
+            aspectRatio: aspectRatio(video.videoWidth, video.videoHeight),
+            people: personCategory(count)
+          });
+        });
+        recordsBySection.set(group.title, [...unique.values()]);
+      });
+
+      const allRecords = [...recordsBySection.values()].flat();
+      const onePersonRecords = allRecords.filter(
+        (record) =&gt; record.people === &quot;1 dancer&quot;
+      );
+      const onePersonDurations = onePersonRecords
+        .map((record) =&gt; record.duration)
+        .filter(Number.isFinite);
+      const exactFiveSecondCount = onePersonDurations.filter(
+        (duration) =&gt; Math.abs(duration - 5) &lt;= 0.005
+      ).length;
+      const durationRange = onePersonDurations.length &gt; 0
+        ? `${Math.min(...onePersonDurations).toFixed(3)}–${Math.max(...onePersonDurations).toFixed(3)} s`
+        : &quot;Unavailable&quot;;
+      const estimatedFrames = onePersonDurations.map(
+        (duration) =&gt; Math.round(duration * 15)
+      );
+      const exact75FrameCount = estimatedFrames.filter((frames) =&gt; frames === 75).length;
+      const frameRange = estimatedFrames.length &gt; 0
+        ? `${Math.min(...estimatedFrames)}–${Math.max(...estimatedFrames)} frames`
+        : &quot;Unavailable&quot;;
+      const durationExceptions = onePersonRecords.length - exactFiveSecondCount;
+
+      comparisonBody.innerHTML = `
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Videos&lt;/th&gt;
+          &lt;td&gt;${onePersonRecords.length} one-person videos&lt;/td&gt;
+          &lt;td&gt;One dancer per clip&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Resolution&lt;/th&gt;
+          &lt;td&gt;${compactCounts(onePersonRecords.map((record) =&gt; record.resolution))}&lt;/td&gt;
+          &lt;td&gt;640×768&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Ratio&lt;/th&gt;
+          &lt;td&gt;${compactCounts(onePersonRecords.map((record) =&gt; record.aspectRatio))}&lt;/td&gt;
+          &lt;td&gt;5:6 portrait&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Length&lt;/th&gt;
+          &lt;td&gt;${exactFiveSecondCount}/${onePersonRecords.length} are exactly 5.000 s · range ${durationRange}&lt;/td&gt;
+          &lt;td&gt;5 s, first frame to last frame&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Frame rate&lt;/th&gt;
+          &lt;td&gt;15 fps nominal; one source is approximately 15.001 fps&lt;/td&gt;
+          &lt;td&gt;16 fps&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;Frame count&lt;/th&gt;
+          &lt;td&gt;${exact75FrameCount}/${onePersonRecords.length} are 75 frames · estimated range ${frameRange}&lt;/td&gt;
+          &lt;td&gt;81 frames&lt;/td&gt;
+        &lt;/tr&gt;
+      `;
+      const overall = summarize(allRecords);
+      const overallPeople = categoryCounts(allRecords);
+      const dominantResolution = overall.resolutions[0] ?? [&quot;Unavailable&quot;, 0];
+      const fiveSecondCount = allRecords.filter(
+        (record) =&gt; Math.abs(record.duration - 5) &lt;= 0.005
+      ).length;
+
+      const sectionRows = groups.map((group) =&gt; {
+        const records = recordsBySection.get(group.title) ?? [];
+        const summary = summarize(records);
+        const people = categoryCounts(records);
+        const resolutionSummary = summary.resolutions
+          .map(([resolution, count]) =&gt; `${resolution}: ${count}`)
+          .join(&quot;; &quot;);
+        return `&lt;tr&gt;
+          &lt;td&gt;${group.title}&lt;/td&gt;
+          &lt;td class=&quot;text-end&quot;&gt;${records.length}&lt;/td&gt;
+          &lt;td class=&quot;text-end&quot;&gt;${durationText(summary.total)}&lt;/td&gt;
+          &lt;td&gt;${summary.min.toFixed(1)} / ${summary.median.toFixed(1)} / ${summary.max.toFixed(1)} s&lt;/td&gt;
+          &lt;td&gt;&amp;lt;5: ${summary.bins.under5} · 5: ${summary.bins.exact5} · 5-10: ${summary.bins.fiveTo10} · &amp;gt;10: ${summary.bins.over10}&lt;/td&gt;
+          &lt;td&gt;${people.get(&quot;1 dancer&quot;)} / ${people.get(&quot;2 dancers&quot;)} / ${people.get(&quot;3 dancers&quot;)} / ${people.get(&quot;Multiple (4+)&quot;)}&lt;/td&gt;
+          &lt;td&gt;${resolutionSummary}&lt;/td&gt;
+        &lt;/tr&gt;`;
+      }).join(&quot;&quot;);
+
+      const videoRows = allRecords.map((record) =&gt; `&lt;tr&gt;
+        &lt;td&gt;${record.section}&lt;/td&gt;
+        &lt;td&gt;${record.name}&lt;/td&gt;
+        &lt;td class=&quot;text-end&quot;&gt;${record.duration.toFixed(3)} s&lt;/td&gt;
+        &lt;td class=&quot;text-nowrap&quot;&gt;${record.resolution}&lt;/td&gt;
+        &lt;td&gt;${record.people}&lt;/td&gt;
+      &lt;/tr&gt;`).join(&quot;&quot;);
+
+      statsRoot.innerHTML = `
+        &lt;h1&gt;Dataset statistics&lt;/h1&gt;
+        &lt;p class=&quot;ds-auto-note&quot;&gt;Automatically recomputed from the unique videos linked on this page whenever it loads.&lt;/p&gt;
+        &lt;div class=&quot;viz-grid&quot;&gt;
+          &lt;div class=&quot;card viz-stat&quot;&gt;
+            &lt;span class=&quot;text-muted&quot;&gt;Unique linked videos&lt;/span&gt;
+            &lt;div class=&quot;viz-stat-value&quot;&gt;${allRecords.length}&lt;/div&gt;
+            &lt;span class=&quot;text-small&quot;&gt;${durationText(overall.total)} total footage&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card viz-stat&quot;&gt;
+            &lt;span class=&quot;text-muted&quot;&gt;Single-dancer videos&lt;/span&gt;
+            &lt;div class=&quot;viz-stat-value&quot;&gt;${overallPeople.get(&quot;1 dancer&quot;)}&lt;/div&gt;
+            &lt;span class=&quot;text-small&quot;&gt;${(overallPeople.get(&quot;1 dancer&quot;) / allRecords.length * 100).toFixed(1)}% of videos&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;card viz-stat&quot;&gt;
+            &lt;span class=&quot;text-muted&quot;&gt;Dominant resolution&lt;/span&gt;
+            &lt;div class=&quot;viz-stat-value&quot;&gt;${dominantResolution[0]}&lt;/div&gt;
+            &lt;span class=&quot;text-small&quot;&gt;${dominantResolution[1]} of ${allRecords.length} videos&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ds-person-row&quot;&gt;
+          ${personBadges(allRecords)}
+          &lt;span class=&quot;viz-badge&quot;&gt;Exactly 5 seconds: ${fiveSecondCount}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ds-table-block&quot;&gt;
+          &lt;h3&gt;Section comparison&lt;/h3&gt;
+          &lt;div class=&quot;table-responsive&quot;&gt;
+            &lt;table class=&quot;table table-sm&quot;&gt;
+              &lt;thead&gt;&lt;tr&gt;
+                &lt;th&gt;Section&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Videos&lt;/th&gt;
+                &lt;th class=&quot;text-end&quot;&gt;Total length&lt;/th&gt;&lt;th&gt;Min / median / max&lt;/th&gt;
+                &lt;th&gt;Length distribution&lt;/th&gt;&lt;th&gt;1 / 2 / 3 / 4+ dancers&lt;/th&gt;&lt;th&gt;Resolution counts&lt;/th&gt;
+              &lt;/tr&gt;&lt;/thead&gt;
+              &lt;tbody&gt;${sectionRows}&lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;details class=&quot;ds-table-block&quot;&gt;
+          &lt;summary&gt;Video-level metadata (${allRecords.length} videos)&lt;/summary&gt;
+          &lt;div class=&quot;table-responsive&quot;&gt;
+            &lt;table class=&quot;table table-sm&quot;&gt;
+              &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Section&lt;/th&gt;&lt;th&gt;Video&lt;/th&gt;
+              &lt;th class=&quot;text-end&quot;&gt;Length&lt;/th&gt;&lt;th&gt;Resolution&lt;/th&gt;&lt;th&gt;Dancers&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+              &lt;tbody&gt;${videoRows}&lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+        &lt;/details&gt;`;
+
+      groups.forEach((group) =&gt; {
+        const records = recordsBySection.get(group.title) ?? [];
+        const summary = summarize(records);
+        const resolutionSummary = summary.resolutions
+          .map(([resolution, count]) =&gt; `${resolution} (${count})`)
+          .join(&quot;, &quot;);
+        const block = document.createElement(&quot;div&quot;);
+        block.className = &quot;ds-section-summary&quot;;
+        block.innerHTML = `
+          &lt;p&gt;&lt;strong&gt;${records.length} unique videos&lt;/strong&gt; · ${durationText(summary.total)} total ·
+          length ${summary.min.toFixed(1)}-${summary.max.toFixed(1)} s · median ${summary.median.toFixed(1)} s&lt;/p&gt;
+          &lt;p class=&quot;text-muted&quot;&gt;Resolution: ${resolutionSummary} ·
+          Length bins: &amp;lt;5 s ${summary.bins.under5}, exactly 5 s ${summary.bins.exact5},
+          5-10 s ${summary.bins.fiveTo10}, &amp;gt;10 s ${summary.bins.over10}&lt;/p&gt;
+          &lt;div class=&quot;ds-person-row&quot;&gt;${personBadges(records)}&lt;/div&gt;`;
+        group.heading.insertAdjacentElement(&quot;afterend&quot;, block);
+      });
+    });
+  })();
+  &lt;/script&gt;
+
+  &lt;script&gt;
+  (() =&gt; {
+    const root = document.getElementById(&quot;turning-dataset&quot;);
+    const status = document.getElementById(&quot;dataset-filter-status&quot;);
+    const buttons = [...document.querySelectorAll(&quot;[data-person-filter]&quot;)];
+    const dancerCounts = root?.datasetDancerCounts;
+    if (root == null || status == null || dancerCounts == null || buttons.length === 0) return;
+
+    const sections = [];
+    let current = null;
+    [...root.children].forEach((child) =&gt; {
+      const headingText = child.matches(&quot;.td-heading&quot;)
+        ? child.querySelector(&quot;h2&quot;)?.textContent.trim()
+        : null;
+      if (headingText?.startsWith(&quot;Section &quot;)) {
+        current = {
+          heading: child,
+          label: child.querySelector(&quot;p&quot;),
+          articles: []
+        };
+        sections.push(current);
+        return;
+      }
+      if (current != null) {
+        current.articles.push(...child.querySelectorAll(&quot;article.td-row&quot;));
+      }
+    });
+
+    const sourceElementFor = (video) =&gt; video.querySelector(&quot;source&quot;);
+    const originalSourceFor = (video) =&gt; {
+      const source = sourceElementFor(video);
+      const current = source?.getAttribute(&quot;src&quot;) ?? &quot;&quot;;
+      if (video.dataset.originalSource == null || video.dataset.originalSource === &quot;&quot;) {
+        video.dataset.originalSource = current;
+      }
+      return video.dataset.originalSource;
+    };
+    const processedSourceFor = (originalSource) =&gt;
+      `training data set/${originalSource.split(&quot;/&quot;).pop() ?? originalSource}`;
+    const conditioningFrameSourceFor = (originalSource, position) =&gt; {
+      const filename = originalSource.split(&quot;/&quot;).pop() ?? originalSource;
+      const stem = filename.replace(/\.mp4$/i, &quot;&quot;);
+      return `training data set/conditioning_frames/${stem}_${position}.png`;
+    };
+    const processedExclusions = new Set([
+      &quot;turning_segments/原地端腿转2.mp4&quot;
+    ]);
+    const sharedPrompts = {
+      body: &quot;中国唐代敦煌舞，舞者展现肢体曲线，身体随呼吸起伏，形成柔和连贯的曲线造型。&quot;,
+      turning: &quot;中国唐代敦煌舞，舞者转圈，身体保持平衡，配合敦煌舞手姿完成旋转。&quot;,
+      footwork: &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;
+    };
+    const training1Prompts = new Map([
+      [&quot;04-five-bend.mp4&quot;, &quot;中国唐代敦煌舞，舞者小幅向前移步，展现肢体曲线。&quot;],
+      [&quot;05-twisting-1.mp4&quot;, &quot;中国唐代敦煌舞，舞者脚下流动，拧身出胯，展现身体曲线。&quot;],
+      [&quot;05-twisting-2.mp4&quot;, &quot;中国唐代敦煌舞，舞者脚下流动，拧身出胯，展现身体曲线。&quot;],
+      [&quot;05-twisting-3.mp4&quot;, &quot;中国唐代敦煌舞，舞者脚下流动，拧身出胯，展现身体曲线。&quot;],
+      [&quot;05-twisting-4.mp4&quot;, &quot;中国唐代敦煌舞，舞者脚下流动，拧身出胯，展现身体曲线。&quot;],
+      [&quot;06-s-curve-1a_0-5.mp4&quot;, &quot;中国唐代敦煌舞，舞者脚下流动，拧身出胯，展现身体曲线。&quot;],
+      [&quot;06-s-curve-1b_5-11.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地提沉，展现身体曲线。&quot;],
+      [&quot;00_08_18m27s-18m59s_02-07.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地提沉，展现肢体曲线。&quot;],
+      [&quot;00_08_18m27s-18m59s_07-12.mp4&quot;, &quot;中国唐代敦煌舞，舞者小幅向前移步，展现肢体曲线。&quot;],
+      [&quot;00_08_18m27s-18m59s_18-23.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地提沉，展现肢体曲线。&quot;],
+      [&quot;00_08_18m27s-18m59s_25-30.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地提沉，展现肢体曲线。&quot;],
+      [&quot;原地端腿转_0-5.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地转圈，身体保持平衡，配合敦煌舞手姿完成旋转。&quot;],
+      [&quot;原地端腿转_3-8.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地转圈，身体保持平衡，配合敦煌舞手姿完成旋转。&quot;],
+      [&quot;原地端腿转3.mp4&quot;, &quot;中国唐代敦煌舞，舞者原地转圈，身体保持平衡，配合敦煌舞手姿完成旋转。&quot;],
+      [&quot;行进靠腿转.mp4&quot;, &quot;中国唐代敦煌舞，舞者沿斜线行进并旋转，保持身体平衡。&quot;],
+      [&quot;行进反吸腿转.mp4&quot;, &quot;中国唐代敦煌舞，舞者沿斜线行进并旋转，保持身体平衡。&quot;],
+      [&quot;01_慢步（菩萨步）.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;02_平步点.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;03_靠步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;04_戳点步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;05_小斜步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;06_大斜步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;07_横靠步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;08_横踏步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;09_横碎步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;],
+      [&quot;10_小快步.mp4&quot;, &quot;中国唐代敦煌舞，敦煌步法，配合身体起伏与手臂姿态。&quot;]
+    ]);
+    const promptSections = new Map([
+      [&quot;body_curves_segments/04-five-bend.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/05-twisting-1.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/05-twisting-2.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/05-twisting-3.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/05-twisting-4.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/06-s-curve-1a_0-5.mp4&quot;, &quot;body&quot;],
+      [&quot;body_curves_segments/06-s-curve-1b_5-11.mp4&quot;, &quot;body&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_02-07.mp4&quot;, &quot;body&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_07-12.mp4&quot;, &quot;body&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_18-23.mp4&quot;, &quot;body&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_25-30.mp4&quot;, &quot;body&quot;],
+      [&quot;turning_segments/原地端腿转_0-5.mp4&quot;, &quot;turning&quot;],
+      [&quot;turning_segments/原地端腿转_3-8.mp4&quot;, &quot;turning&quot;],
+      [&quot;turning_segments/原地端腿转3.mp4&quot;, &quot;turning&quot;],
+      [&quot;turning_segments/行进靠腿转.mp4&quot;, &quot;turning&quot;],
+      [&quot;turning_segments/行进反吸腿转.mp4&quot;, &quot;turning&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/01_慢步（菩萨步）.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/02_平步点.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/03_靠步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/04_戳点步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/05_小斜步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/06_大斜步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/07_横靠步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/08_横踏步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/09_横碎步.mp4&quot;, &quot;footwork&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/10_小快步.mp4&quot;, &quot;footwork&quot;]
+    ]);
+    const specificPrompts = new Map([
+      [&quot;body_curves_segments/04-five-bend.mp4&quot;, &quot;中国唐代敦煌舞，舞者在缓慢行进中展现五道弯肢体曲线，迈步后提胯冲肋、并膝侧抬小腿，头部与下巴反向扭转，双臂向侧方伸展，掌心向上。&quot;],
+      [&quot;body_curves_segments/05-twisting-1.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，斜向后退转身，拧腰沉胯并配合手臂绕动。&quot;],
+      [&quot;body_curves_segments/05-twisting-2.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，斜向后退转身，拧腰沉胯并配合手臂绕动。&quot;],
+      [&quot;body_curves_segments/05-twisting-3.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，斜向后退转身，拧腰沉胯并配合手臂绕动。&quot;],
+      [&quot;body_curves_segments/05-twisting-4.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，斜向后退转身，拧腰沉胯并配合手臂绕动。&quot;],
+      [&quot;body_curves_segments/06-s-curve-1a_0-5.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，错步转身，胸腰带动身体形成连贯的S形晃动。&quot;],
+      [&quot;body_curves_segments/06-s-curve-1b_5-11.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，身体由下沉到提踵直立，再出胯冲肋形成S形造型。&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_02-07.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，双手扶胯，膝胯与躯干依次侧移形成柔和曲线。&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_07-12.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，双手扶胯，交叉步配合左右出胯和身体侧倾。&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_18-23.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，身体缓慢起伏，双臂由体侧展开并向上绕动。&quot;],
+      [&quot;new vids/00_08_18m27s-18m59s_25-30.mp4&quot;, &quot;中国唐代敦煌舞，舞者展现肢体曲线，双手合掌后展开，躯干随手臂缓慢侧倾。&quot;],
+      [&quot;turning_segments/原地端腿转_0-5.mp4&quot;, &quot;中国唐代敦煌舞，舞者转圈，支撑腿直立碾转，动力腿侧抬端起，双臂平伸。&quot;],
+      [&quot;turning_segments/原地端腿转_3-8.mp4&quot;, &quot;中国唐代敦煌舞，舞者转圈，支撑腿直立碾转，动力腿侧抬端起，双臂平伸。&quot;],
+      [&quot;turning_segments/原地端腿转3.mp4&quot;, &quot;中国唐代敦煌舞，舞者转圈，支撑腿直立碾转，动力腿侧抬端起，双臂平伸。&quot;],
+      [&quot;turning_segments/行进靠腿转.mp4&quot;, &quot;中国唐代敦煌舞，舞者转圈，沿斜线平转行进，转后靠腿并立掌下沉。&quot;],
+      [&quot;turning_segments/行进反吸腿转.mp4&quot;, &quot;中国唐代敦煌舞，舞者转圈，斜向迈步并反吸腿碾转，单手平托随身体翻腕。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/01_慢步（菩萨步）.mp4&quot;, &quot;中国唐代敦煌舞，舞者以慢步步法向前移动，身体随呼吸升沉，手臂柔和撩推。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/02_平步点.mp4&quot;, &quot;中国唐代敦煌舞，舞者以平步步法交替前行，后脚擦过脚腕，手臂自然摆动。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/03_靠步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以点靠步法轻快移动，脚尖点地后靠腿，重心交替。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/04_戳点步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以戳点步法前行，双脚依次点地靠腿，双手配合翻腕。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/05_小斜步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以小斜步法沿左右斜线轻快移动，侧抬腿并配合手臂开合。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/06_大斜步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以大斜步法沿斜线迈步并吸靠腿，双臂有力地斜向展开。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/07_横靠步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以横靠步法侧向移动并靠腿，手臂绕腕，身体柔和升沉。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/08_横踏步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以横踏步法侧向移动，手臂随方向晃动，身体保持平稳。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/09_横碎步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以横碎步法半脚尖横移，双臂向侧上方晃动并提腕推掌。&quot;],
+      [&quot;sections_part1/08_八_步法十种_subsections/10_小快步.mp4&quot;, &quot;中国唐代敦煌舞，舞者以小快步法连续快速行进，身体随路线流动。&quot;]
+    ]);
+    const setProcessedState = (video, processed) =&gt; {
+      const source = sourceElementFor(video);
+      if (source == null) return;
+      const originalSource = originalSourceFor(video);
+      const nextSource = processed ? processedSourceFor(originalSource) : originalSource;
+      if (source.getAttribute(&quot;src&quot;) !== nextSource) {
+        source.setAttribute(&quot;src&quot;, nextSource);
+        video.load();
+      }
+      const mediaContainer = video.parentElement;
+      if (mediaContainer == null) return;
+      let conditioning = mediaContainer.querySelector(&quot;:scope &gt; .processed-conditioning&quot;);
+      if (processed &amp;&amp; conditioning == null) {
+        conditioning = document.createElement(&quot;div&quot;);
+        conditioning.className = &quot;processed-conditioning&quot;;
+        [
+          [&quot;first&quot;, &quot;First&quot;],
+          [&quot;last&quot;, &quot;Last&quot;]
+        ].forEach(([position, label]) =&gt; {
+          const figure = document.createElement(&quot;figure&quot;);
+          const image = document.createElement(&quot;img&quot;);
+          const caption = document.createElement(&quot;figcaption&quot;);
+          image.src = conditioningFrameSourceFor(originalSource, position);
+          image.alt = `${label} conditioning image`;
+          image.loading = &quot;lazy&quot;;
+          caption.textContent = label;
+          figure.append(image, caption);
+          conditioning.append(figure);
+        });
+        mediaContainer.insertBefore(conditioning, video);
+      }
+      mediaContainer.classList.toggle(&quot;processed-video-row&quot;, processed);
+      if (conditioning != null) conditioning.hidden = !processed;
+
+      const promptHost = video.closest(&quot;article.td-row&quot;)
+        ?.querySelector(&quot;:scope &gt; .td-instructions&quot;);
+      let promptBlock = promptHost == null
+        ? null
+        : [...promptHost.querySelectorAll(&quot;:scope &gt; .processed-prompts&quot;)]
+            .find((block) =&gt; block.dataset.promptSource === originalSource) ?? null;
+      if (processed &amp;&amp; promptBlock == null &amp;&amp; promptHost != null) {
+        const specificPrompt = specificPrompts.get(originalSource);
+        const section = promptSections.get(originalSource);
+        const sharedPrompt = section == null ? null : sharedPrompts[section];
+        if (specificPrompt != null &amp;&amp; sharedPrompt != null) {
+          promptBlock = document.createElement(&quot;div&quot;);
+          promptBlock.className = &quot;processed-prompts&quot;;
+          promptBlock.dataset.promptSource = originalSource;
+          const promptFile = document.createElement(&quot;div&quot;);
+          promptFile.className = &quot;processed-prompt-file&quot;;
+          promptFile.textContent = originalSource.split(&quot;/&quot;).pop() ?? originalSource;
+          promptBlock.append(promptFile);
+          const training1Prompt = training1Prompts.get(originalSource.split(&quot;/&quot;).pop() ?? originalSource);
+          if (training1Prompt != null) {
+            const training1Text = document.createElement(&quot;div&quot;);
+            training1Text.className = &quot;training-1-prompt-text&quot;;
+            training1Text.textContent = training1Prompt;
+            promptBlock.append(training1Text);
+          }
+          [
+            [&quot;specific&quot;, &quot;Motion-specific prompt&quot;, specificPrompt],
+            [&quot;shared&quot;, &quot;Section-shared prompt&quot;, sharedPrompt]
+          ].forEach(([kind, label, prompt]) =&gt; {
+            const field = document.createElement(&quot;label&quot;);
+            const promptLabel = document.createElement(&quot;span&quot;);
+            const input = document.createElement(&quot;textarea&quot;);
+            const promptVersion = (originalSource === &quot;body_curves_segments/04-five-bend.mp4&quot; &amp;&amp; kind === &quot;specific&quot;)
+              || (section === &quot;footwork&quot; &amp;&amp; kind === &quot;shared&quot;) ? &quot;v5&quot; : &quot;v3&quot;;
+            const storageKey = `dunhuang-prompt-${promptVersion}:${originalSource}:${kind}`;
+            field.className = &quot;processed-prompt-field&quot;;
+            field.dataset.promptKind = kind;
+            promptLabel.className = &quot;processed-prompt-label&quot;;
+            promptLabel.textContent = label;
+            input.className = &quot;input processed-prompt-input&quot;;
+            if (kind === &quot;shared&quot;) {
+              input.classList.add(&quot;processed-prompt-input-shared&quot;);
+            }
+            input.rows = 4;
+            try {
+              input.value = window.localStorage.getItem(storageKey) ?? prompt;
+            } catch {
+              input.value = prompt;
+            }
+            input.addEventListener(&quot;input&quot;, () =&gt; {
+              try { window.localStorage.setItem(storageKey, input.value); } catch {}
+            });
+            field.append(promptLabel, input);
+            promptBlock.append(field);
+          });
+          promptHost.append(promptBlock);
+        }
+      }
+      if (promptBlock != null) promptBlock.hidden = !processed;
+
+      const fileLabel = mediaContainer.querySelector(&quot;:scope &gt; .td-file&quot;);
+      if (fileLabel == null) return;
+      if (fileLabel.dataset.originalLabel == null) {
+        fileLabel.dataset.originalLabel = fileLabel.textContent.trim();
+      }
+      fileLabel.textContent = processed
+        ? `${fileLabel.dataset.originalLabel} · Processed 384×464 · 81 frames · 16 fps`
+        : fileLabel.dataset.originalLabel;
+    };
+    const matches = (count, filter) =&gt; {
+      if (filter === &quot;all&quot;) return true;
+      if (filter === &quot;processed&quot; || filter === &quot;training1&quot;) return count === 1;
+      if (filter === &quot;multiple&quot;) return count &gt;= 4;
+      return count === Number(filter);
+    };
+    const labelFor = (filter) =&gt; ({
+      &quot;1&quot;: &quot;1 dancer&quot;,
+      &quot;2&quot;: &quot;2 dancers&quot;,
+      &quot;3&quot;: &quot;3 dancers&quot;,
+      processed: &quot;processed training videos&quot;,
+      training1: &quot;training 1 videos&quot;,
+      multiple: &quot;multiple dancers&quot;,
+      all: &quot;all dancer counts&quot;
+    })[filter];
+
+    const applyFilter = (filter) =&gt; {
+      const isTrainingView = filter === &quot;processed&quot; || filter === &quot;training1&quot;;
+      root.classList.toggle(&quot;training-1-mode&quot;, filter === &quot;training1&quot;);
+      let overallVisible = 0;
+      const overallPrompts = new Set();
+      sections.forEach((section) =&gt; {
+        const visibleSources = new Set();
+        const visiblePrompts = new Set();
+        section.articles.forEach((article) =&gt; {
+          const videos = [...article.querySelectorAll(&quot;video&quot;)];
+          let articleHasMatch = false;
+          videos.forEach((video) =&gt; {
+            const source = originalSourceFor(video);
+            const hasTraining1Prompt = training1Prompts.has(source.split(&quot;/&quot;).pop() ?? source);
+            const visible = isTrainingView
+              ? dancerCounts.get(source) === 1 &amp;&amp; !processedExclusions.has(source)
+              : matches(dancerCounts.get(source), filter);
+            const finalVisible = filter === &quot;training1&quot; ? visible &amp;&amp; hasTraining1Prompt : visible;
+            setProcessedState(video, finalVisible &amp;&amp; isTrainingView);
+            const stackItem = video.parentElement?.parentElement?.classList.contains(&quot;td-video-stack&quot;)
+              ? video.parentElement
+              : null;
+            if (stackItem != null) stackItem.hidden = !finalVisible;
+            if (finalVisible) {
+              articleHasMatch = true;
+              visibleSources.add(source);
+              if (filter === &quot;training1&quot; &amp;&amp; hasTraining1Prompt) {
+                const training1Prompt = training1Prompts.get(source.split(&quot;/&quot;).pop() ?? source);
+                if (training1Prompt != null) visiblePrompts.add(training1Prompt);
+              }
+            }
+          });
+          article.hidden = !articleHasMatch;
+        });
+        overallVisible += visibleSources.size;
+        visiblePrompts.forEach((prompt) =&gt; overallPrompts.add(prompt));
+        if (section.label != null) {
+          section.label.textContent = filter === &quot;training1&quot;
+            ? `${visibleSources.size} video${visibleSources.size === 1 ? &quot;&quot; : &quot;s&quot;} · ${visiblePrompts.size} different prompt${visiblePrompts.size === 1 ? &quot;&quot; : &quot;s&quot;} in Training Run 1`
+            : `${visibleSources.size} video${visibleSources.size === 1 ? &quot;&quot; : &quot;s&quot;} in this view`;
+        }
+      });
+
+      buttons.forEach((button) =&gt; {
+        const active = button.dataset.personFilter === filter;
+        button.setAttribute(&quot;aria-pressed&quot;, String(active));
+        button.classList.toggle(&quot;btn-primary&quot;, active);
+      });
+      status.textContent = isTrainingView
+        ? filter === &quot;training1&quot;
+          ? `Showing ${overallVisible} Training Run 1 videos · ${overallPrompts.size} different prompts`
+          : `Showing ${overallVisible} processed training videos`
+        : `Showing ${overallVisible} unique videos with ${labelFor(filter)}`;
+    };
+
+    buttons.forEach((button) =&gt; button.addEventListener(&quot;click&quot;, () =&gt; {
+      applyFilter(button.dataset.personFilter ?? &quot;1&quot;);
+    }));
+    document.getElementById(&quot;export-prompt-edits&quot;)?.addEventListener(&quot;click&quot;, () =&gt; {
+      const sectionLabels = {
+        body: &quot;肢体曲线&quot;,
+        turning: &quot;转圈&quot;,
+        footwork: &quot;步法&quot;
+      };
+      const records = [...promptSections.entries()].map(([sourceVideo, section]) =&gt; {
+        let prompt = sharedPrompts[section];
+        try {
+          const savedPrompt = [&quot;v5&quot;, &quot;v4&quot;, &quot;v3&quot;, &quot;v2&quot;, &quot;v1&quot;]
+            .map((version) =&gt; window.localStorage.getItem(
+              `dunhuang-prompt-${version}:${sourceVideo}:shared`
+            ))
+            .find((value) =&gt; value != null);
+          prompt = savedPrompt ?? prompt;
+        } catch {}
+        return {
+          file_name: sourceVideo.split(&quot;/&quot;).pop() ?? sourceVideo,
+          section: sectionLabels[section],
+          shared_prompt: prompt
+        };
+      });
+      const jsonl = records.map((record) =&gt; JSON.stringify(record)).join(&quot;\n&quot;) + &quot;\n&quot;;
+      const blob = new Blob([jsonl], { type: &quot;application/x-ndjson&quot; });
+      const link = document.createElement(&quot;a&quot;);
+      link.href = URL.createObjectURL(blob);
+      link.download = &quot;dunhuang-motion-section-prompts.jsonl&quot;;
+      link.click();
+      window.setTimeout(() =&gt; URL.revokeObjectURL(link.href), 1000);
+    });
+    applyFilter(&quot;1&quot;);
+  })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
