@@ -2654,7 +2654,12 @@ html&gt;body{padding:0}&lt;/style&gt;
       link.click();
       window.setTimeout(() =&gt; URL.revokeObjectURL(link.href), 1000);
     });
-    applyFilter(&quot;1&quot;);
+    let initialFilter = &quot;1&quot;;
+    try {
+      const requestedView = new URL(window.parent.location.href).searchParams.get(&quot;view&quot;);
+      if (requestedView === &quot;training1&quot;) initialFilter = &quot;training1&quot;;
+    } catch {}
+    applyFilter(initialFilter);
   })();
   &lt;/script&gt;
 &lt;/div&gt;
